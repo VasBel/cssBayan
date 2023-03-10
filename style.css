@@ -1,0 +1,98 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: 'fredoka';
+  src: url(./assets/fonts/Fredoka_One/FredokaOne-Regular.ttf);
+}
+body{
+  font-family: 'fredoka';
+  font-size: 16px;
+  background-color: rgb(212, 209, 209);
+  color: blue;
+}
+summary{
+  display: flex;
+  justify-content: space-between;
+}
+summary::-webkit-details-marker{
+  display: none;
+}
+
+.wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  min-height: 3vh;
+}
+.bayan{
+  transition: .5s;
+  cursor: pointer;
+  width: 38vw;
+  box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  
+
+}
+
+.bayan__item{
+  background-color: rgb(195, 192, 192);
+  overflow: hidden;
+}
+
+.bayan__title{
+  transition: .5s;
+  text-align: left;
+  width: 38vw;
+  background-color:rgb(179, 239, 16);
+  border: 0.3vh solid black;
+  border-radius: 3vh;
+  padding: 2vh;
+  
+}
+span{
+  display: none;
+  font-size: 12px;
+  transition: .5s;
+}
+.bayan:hover{
+  transition: .5s;
+  color: black;
+}
+.bayan:hover span{
+  display: block;
+  transition: .5s;
+}
+
+.bayan__img{
+  border-radius: 2vh;
+  width: 100%;
+}
+
+.bayan__item[open] span{
+  transition: .5s;
+  transform: rotate(-45deg);
+}
+.bayan__item[open] .bayan__title{
+  color: black
+}
+
+
+@media(max-width: 821px){
+  body{
+    font-size: 12px;
+  }
+  span{
+    font-size: 8px;
+  }
+}
+@media(max-width: 321px){
+  body{
+    font-size: 10px;
+  }
+  span{
+    font-size: 6px;
+  }
+}
